@@ -1,0 +1,46 @@
+Write a C++ program to demonstrate use of Multilevel Inheritance.
+#include <iostream>
+
+using namespace std;
+
+class Vehicle {
+public:
+    void start() {
+        cout <<" mahemdavadi riddhi j 220130318035 ";
+        cout << "Vehicle started." << endl;
+    }
+
+    void stop() {
+        cout << "Vehicle stopped." << endl;
+    }
+};
+
+class Car : public Vehicle {
+public:
+    void accelerate() {
+        cout << "Car accelerating." << endl;
+    }
+
+    void brake() {
+        cout << "Car braking." << endl;
+    }
+};
+
+class SportsCar : public Car {
+public:
+    void turbo() {
+        cout << "Sports car turbocharged." << endl;
+    }
+};
+
+int main() {
+    SportsCar mySportsCar;
+
+    mySportsCar.start();
+    mySportsCar.accelerate();
+    mySportsCar.brake();
+    mySportsCar.turbo();
+    mySportsCar.stop();
+
+    return 0;
+}

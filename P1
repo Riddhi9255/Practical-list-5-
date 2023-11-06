@@ -1,0 +1,40 @@
+Write a C++ program to demonstrate use of Single Inheritance.
+#include <iostream>
+
+using namespace std;
+
+// Base class (parent class)
+class Vehicle {
+public:
+    void start() {
+        cout <<" mahemdavadi riddhi j , 220130318035";
+        cout << "Vehicle started." << endl;
+    }
+
+    void stop() {
+        cout << "Vehicle stopped." << endl;
+    }
+};
+
+// Derived class (child class) inheriting from Vehicle
+class Car : public Vehicle {
+public:
+    void accelerate() {
+        cout << "Car accelerating." << endl;
+    }
+
+    void brake() {
+        cout << "Car braking." << endl;
+    }
+};
+
+int main() {
+    Car myCar;
+
+    myCar.start();       // Accessing base class method
+    myCar.accelerate();  // Accessing derived class method
+    myCar.brake();       // Accessing derived class method
+    myCar.stop();        // Accessing base class method
+
+    return 0;
+}

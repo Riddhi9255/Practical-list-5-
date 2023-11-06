@@ -1,0 +1,54 @@
+Write a C++ program to demonstrate use of Multiple Inheritance.
+#include <iostream>
+
+using namespace std;
+
+// First base class
+class Vehicle {
+public:
+    void start() {
+       cout <<" mahemdavadi riddhi j 220130318035 ";
+        cout << "Vehicle started." << endl;
+    }
+
+    void stop() {
+        cout << "Vehicle stopped." << endl;
+    }
+};
+
+// Second base class
+class Engine {
+public:
+    void ignite() {
+        cout << "Engine ignited." << endl;
+    }
+
+    void shutdown() {
+        cout << "Engine shut down." << endl;
+    }
+};
+
+// Derived class inheriting from both Vehicle and Engine
+class Car : public Vehicle, public Engine {
+public:
+    void drive() {
+        cout << "Car is being driven." << endl;
+    }
+
+    void park() {
+        cout << "Car is parked." << endl;
+    }
+};
+
+int main() {
+    Car myCar;
+
+    myCar.start();   // Accessing method from Vehicle
+    myCar.ignite();  // Accessing method from Engine
+    myCar.drive();   // Accessing method from Car
+    myCar.park();    // Accessing method from Car
+    myCar.stop();    // Accessing method from Vehicle
+    myCar.shutdown(); // Accessing method from Engine
+
+    return 0;
+}
